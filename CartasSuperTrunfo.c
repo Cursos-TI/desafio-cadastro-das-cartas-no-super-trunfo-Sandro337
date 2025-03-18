@@ -1,99 +1,118 @@
 #include <stdio.h>
 
+int main () {
+    
+   char estado1 , estado2 ;
+   char cidade1 [20], cidade2 [20];
+   char codigo1 [20] , codigo2 [20];
+   int populacao1 , populacao2;
+   float areaemkm1 , areaemkm2;
+   float PIB1 ,  PIB2;
+   int pontoturistico1 , pontoturistico2;
+   float dencidadepopulacional1 ,  dencidadepopulacional2;
+   float pibpercapital1 , pibpercapital2;
 
+   //etrado com os dados carta 1
 
-int main() {
-   char estado;
-   char cidade[20];
-   char codigo[20];
-   int populacao;
-   float areaemkm;
-   float PIB;
-   int pontoturistico;
-   float dencidadepopulacional;
-   float pibpercapital;
-
-  printf("carta1 \n"); 
-   // depois de um bom tempo ta tudo ok com a primeira carta
-
+  printf("### carta1 ### \n"); 
+   
    printf("digite letra do estado: \n");
-   scanf("%c" , &estado );
-   //adicionar somente a primeira letra do estado 
+   scanf("%c" , &estado1 );
 
    printf("digite a cidade: \n");
-   scanf("%s" , &cidade);
+   scanf("%s" , &cidade1);
 
    printf("codigo da crata; \n");
-   scanf("%s" , &codigo);
+   scanf("%s" , &codigo1);
 
    printf("populacao: \n");
-   scanf("%d" , &populacao);
+   scanf("%d" , &populacao1);
 
    printf("area em km: \n");
-   scanf("%f" , &areaemkm);
+   scanf("%f" , &areaemkm1);
 
    printf("PIB: \n");
-   scanf("%f" , &PIB);
+   scanf("%f" , &PIB1);
 
    printf("ponto turistico: \n");
-   scanf ("%i", &pontoturistico);
+   scanf ("%i", &pontoturistico1);
+
+   //calculo da carta 1
    
-   dencidadepopulacional= (float) populacao / areaemkm ;
-   pibpercapital= (float) PIB*(10000000) / populacao; 
+   dencidadepopulacional1= (float) populacao1 / areaemkm1 ;
+   pibpercapital1= (float) PIB1 * (10000000) / populacao1; 
 
-   printf("carta1 \n ");
-   printf("nome do estado: %c \n", estado);
-   printf("nome da cidade: %s \n", cidade);
-   printf("codigo: %s \n ", codigo);
-   printf("populacao: %d  \n" , populacao);
-   printf("area em km: %f \n" , areaemkm);
-   printf("PIB: %f \n" , PIB);
-   printf("pontos turisticos: %i \n" , pontoturistico); 
-   printf("A dencidade populacional é: %0.2f\n" , dencidadepopulacional);
-   printf("O PIB pre capital é: %0.2f\n" , pibpercapital);
+   // dados da carta 2
 
-
-   printf("carta2 \n"); 
-   
+   printf("### carta2 ### \n"); 
 
    printf("digite letra do estado: \n");
-   scanf("%c" , &estado );
-   // digitar somente a primeira letra do estado 
+   scanf(" %c" , &estado2 );
 
    printf("digite a cidade: \n");
-   scanf("%s" , &cidade);
+   scanf("%s" , &cidade2);
 
    printf("codigo da crata; \n");
-   scanf("%s" , &codigo);
+   scanf("%s" , &codigo2);
 
    printf("populacao: \n");
-   scanf("%d" , &populacao);
+   scanf("%d" , &populacao2);
 
    printf("area em km: \n");
-   scanf("%f" , &areaemkm);
+   scanf("%f" , &areaemkm2);
 
    printf("PIB: \n");
-   scanf("%f" , &PIB);
+   scanf("%f" , &PIB2);
 
    printf("ponto turistico: \n");
-   scanf ("%i", &pontoturistico); 
-
-   dencidadepopulacional= (float) populacao / areaemkm ;
-   pibpercapital= (float) PIB / populacao; 
-
-   printf("carta2 \n ");
-   printf("nome do estado: %c \n", estado);
-   printf("nome da cidade: %s \n", cidade);
-   printf("codigo: %s \n ", codigo);
-   printf("populacao: %d  \n" , populacao);
-   printf("area em km: %f \n" , areaemkm);
-   printf("PIB: %f \n" , PIB);
-   printf("pontos turisticos: %i \n" , pontoturistico); 
-   printf("A dencidade populacional é: %0.2f\n" , dencidadepopulacional);
-   printf("O PIB pre capital é: %0.2f\n" , pibpercapital);
-
-
+   scanf ("%i", &pontoturistico2);
    
+//cauculos da carta 2
 
-    return 0;
+   dencidadepopulacional2= (float) populacao2 / areaemkm2 ;
+   pibpercapital2= (float) PIB2 *(10000000) / populacao2; 
+
+   printf("### CARTAS ###\n");
+
+   printf("### carta1 ### \n ");
+   printf("estado: %c \n", estado1);
+   printf("cidade: %s \n", cidade1);
+   printf("codigo: %s \n ", codigo1);
+   printf("populacao: %d  \n" , populacao1);
+   printf("area em km: %f \n" , areaemkm1);
+   printf("PIB: %f \n" , PIB1);
+   printf("pontos turisticos: %i \n" , pontoturistico1); 
+   printf("A dencidade populacional é: %.2f\n" , dencidadepopulacional1);
+   printf("O PIB pre capital é: %.2f\n" , pibpercapital1);
+
+   printf("### carta2 ### \n ");
+   printf("estado: %c \n", estado2);
+   printf("cidade: %s \n", cidade2);
+   printf("codigo: %s \n ", codigo2);
+   printf("populacao: %d  \n" , populacao2);//ok
+   printf("area em km: %f \n" , areaemkm2);//ok
+   printf("PIB: %f \n" , PIB2);//ok
+   printf("pontos turisticos: %i \n" , pontoturistico2); 
+   printf("A dencidade populacional é: %.2f\n" , dencidadepopulacional2);//ok
+   printf("O PIB pre capital é: %.2f\n" , pibpercapital2);
+
+   int resultadopopulacao, resultadoarea , resultadoPIB , resultadopontosturisticos, resultadodencidade , resultadopercato;
+
+   resultadoPIB = PIB1 > PIB2;
+   resultadopopulacao = populacao1 > populacao2;
+   resultadoarea =  areaemkm1 > areaemkm2;
+   resultadodencidade =  dencidadepopulacional1 < dencidadepopulacional2;
+   resultadopercato = pibpercapital1 > pibpercapital2;
+   resultadopontosturisticos = pontoturistico1 > pontoturistico2;
+
+// resultado
+   printf("### comparando as cartas ###");
+   printf("carta 1 tem o PIB maior que carta 2: %d\n", resultadoPIB);
+   printf("carta 1 tem a populacao maior  que carta 2: %d\n", resultadopopulacao);
+   printf("carta 1 tem a area em km maior  que carta 2: %d\n", resultadoarea );
+   printf("carta 1 tem a dencidade populacional  menor  que carta 2: %d\n", resultadodencidade );
+   printf("carta 1 tem o PIB per-capital maior que carta 2: %d\n", resultadopercato);
+   printf("carta 1 tem os pontos turistocos maior que carta 2: %d\n", resultadopontosturisticos );
+
+  return 0;
 }
